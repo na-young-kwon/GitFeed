@@ -13,6 +13,8 @@
 		3B85F217299F6F5000408FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B85F215299F6F5000408FA8 /* Main.storyboard */; };
 		3B85F219299F6F5000408FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B85F218299F6F5000408FA8 /* Assets.xcassets */; };
 		3B85F21C299F6F5000408FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B85F21A299F6F5000408FA8 /* LaunchScreen.storyboard */; };
+		3B85F229299F76F000408FA8 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F228299F76F000408FA8 /* ViewModelType.swift */; };
+		3B85F22B299F773F00408FA8 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F22A299F773F00408FA8 /* Application.swift */; };
 		8BA6C8671B19C75EE0245453 /* libPods-GitFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E874954F5B93D7E1475C2BF5 /* libPods-GitFeed.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		3B85F218299F6F5000408FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B85F21B299F6F5000408FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B85F21D299F6F5000408FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B85F228299F76F000408FA8 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		3B85F22A299F773F00408FA8 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		61E47C8C861B90C41D8D765D /* Pods-GitFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitFeed.release.xcconfig"; path = "Target Support Files/Pods-GitFeed/Pods-GitFeed.release.xcconfig"; sourceTree = "<group>"; };
 		E874954F5B93D7E1475C2BF5 /* libPods-GitFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,15 +67,50 @@
 		3B85F20E299F6F5000408FA8 /* GitFeed */ = {
 			isa = PBXGroup;
 			children = (
+				3B85F223299F760600408FA8 /* Application */,
+				3B85F224299F764100408FA8 /* Scenes */,
+				3B85F226299F76BB00408FA8 /* Common */,
+				3B85F227299F76C000408FA8 /* Utility */,
 				3B85F20F299F6F5000408FA8 /* AppDelegate.swift */,
 				3B85F211299F6F5000408FA8 /* SceneDelegate.swift */,
-				3B85F213299F6F5000408FA8 /* ViewController.swift */,
-				3B85F215299F6F5000408FA8 /* Main.storyboard */,
 				3B85F218299F6F5000408FA8 /* Assets.xcassets */,
-				3B85F21A299F6F5000408FA8 /* LaunchScreen.storyboard */,
 				3B85F21D299F6F5000408FA8 /* Info.plist */,
+				3B85F215299F6F5000408FA8 /* Main.storyboard */,
+				3B85F21A299F6F5000408FA8 /* LaunchScreen.storyboard */,
 			);
 			path = GitFeed;
+			sourceTree = "<group>";
+		};
+		3B85F223299F760600408FA8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3B85F22A299F773F00408FA8 /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3B85F224299F764100408FA8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3B85F213299F6F5000408FA8 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3B85F226299F76BB00408FA8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3B85F228299F76F000408FA8 /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3B85F227299F76C000408FA8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			path = "New Group/Utility";
 			sourceTree = "<group>";
 		};
 		E4D3C11E6887E122495FB71C /* Frameworks */ = {
@@ -88,7 +127,6 @@
 				02BFD175FE5F14F8E9D7AADD /* Pods-GitFeed.debug.xcconfig */,
 				61E47C8C861B90C41D8D765D /* Pods-GitFeed.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -189,6 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B85F22B299F773F00408FA8 /* Application.swift in Sources */,
+				3B85F229299F76F000408FA8 /* ViewModelType.swift in Sources */,
 				3B85F214299F6F5000408FA8 /* ViewController.swift in Sources */,
 				3B85F210299F6F5000408FA8 /* AppDelegate.swift in Sources */,
 				3B85F212299F6F5000408FA8 /* SceneDelegate.swift in Sources */,
@@ -347,6 +387,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +417,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
