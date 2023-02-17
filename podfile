@@ -1,0 +1,9 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '14.0'
+
+target 'GitFeed' do
+    pod 'RxSwift', '~> 6.5.0'
+    pod 'RxCocoa', '~> 6.5.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+end
