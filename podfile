@@ -1,9 +1,22 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '14.0'
 
+def rx_swift
+  pod 'RxSwift', '~> 6.5.0'
+end
+
+def rx_cocoa
+  pod 'RxCocoa', '~> 6.5.0'
+end
+
 target 'GitFeed' do
-    pod 'RxSwift', '~> 6.5.0'
-    pod 'RxCocoa', '~> 6.5.0'
-    pod 'Alamofire'
-    pod 'RxAlamofire'
+  use_frameworks!
+  rx_cocoa
+  rx_swift
+end
+
+target 'Domain' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  rx_swift
 end
