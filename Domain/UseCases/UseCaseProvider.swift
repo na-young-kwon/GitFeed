@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol UseCaseProvider {
-    func makePostsUseCase() -> FeedUseCase
+    func makeFeedsUseCase() -> FeedUseCase
 }
