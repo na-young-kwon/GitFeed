@@ -21,6 +21,10 @@
 		3B5EDAFF29A0BAAF005D3E49 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDAFE29A0BAAF005D3E49 /* Network.swift */; };
 		3B5EDB0129A0BBD2005D3E49 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB0029A0BBD2005D3E49 /* NetworkProvider.swift */; };
 		3B5EDB0329A0BC48005D3E49 /* FeedNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB0229A0BC48005D3E49 /* FeedNetwork.swift */; };
+		3B5EDB0C29A0C84D005D3E49 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB0B29A0C84D005D3E49 /* UseCaseProvider.swift */; };
+		3B5EDB0E29A0C860005D3E49 /* FeedsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB0D29A0C860005D3E49 /* FeedsUseCase.swift */; };
+		3B5EDB1029A0C9C3005D3E49 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB0F29A0C9C3005D3E49 /* Cache.swift */; };
+		3B5EDB1329A0D3AB005D3E49 /* CacheValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB1229A0D3AB005D3E49 /* CacheValue.swift */; };
 		3B85F210299F6F5000408FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F20F299F6F5000408FA8 /* AppDelegate.swift */; };
 		3B85F212299F6F5000408FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F211299F6F5000408FA8 /* SceneDelegate.swift */; };
 		3B85F214299F6F5000408FA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F213299F6F5000408FA8 /* ViewController.swift */; };
@@ -80,6 +84,10 @@
 		3B5EDAFE29A0BAAF005D3E49 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3B5EDB0029A0BBD2005D3E49 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		3B5EDB0229A0BC48005D3E49 /* FeedNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNetwork.swift; sourceTree = "<group>"; };
+		3B5EDB0B29A0C84D005D3E49 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		3B5EDB0D29A0C860005D3E49 /* FeedsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsUseCase.swift; sourceTree = "<group>"; };
+		3B5EDB0F29A0C9C3005D3E49 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		3B5EDB1229A0D3AB005D3E49 /* CacheValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheValue.swift; sourceTree = "<group>"; };
 		3B85F20C299F6F5000408FA8 /* GitFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B85F20F299F6F5000408FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B85F211299F6F5000408FA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,9 +160,9 @@
 		3B5EDACC29A0B6C9005D3E49 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				3B5EDAD129A0B6EE005D3E49 /* Repo.swift */,
-				3B5EDAD329A0B6F3005D3E49 /* Actor.swift */,
 				3B5EDAD529A0B6FA005D3E49 /* Feed.swift */,
+				3B5EDAD329A0B6F3005D3E49 /* Actor.swift */,
+				3B5EDAD129A0B6EE005D3E49 /* Repo.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 		3B5EDAF129A0BA49005D3E49 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				3B5EDB1129A0C9F0005D3E49 /* Cache */,
 				3B5EDAFD29A0BAA3005D3E49 /* API */,
 				3B5EDAFB29A0BA8F005D3E49 /* Network */,
 				3B5EDB0629A0BEB9005D3E49 /* UseCases */,
@@ -190,9 +199,20 @@
 		3B5EDB0629A0BEB9005D3E49 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				3B5EDB0D29A0C860005D3E49 /* FeedsUseCase.swift */,
+				3B5EDB0B29A0C84D005D3E49 /* UseCaseProvider.swift */,
 			);
 			name = UseCases;
 			path = Network/UseCases;
+			sourceTree = "<group>";
+		};
+		3B5EDB1129A0C9F0005D3E49 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EDB0F29A0C9C3005D3E49 /* Cache.swift */,
+				3B5EDB1229A0D3AB005D3E49 /* CacheValue.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		3B85F203299F6F5000408FA8 = {
@@ -544,8 +564,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5EDB1329A0D3AB005D3E49 /* CacheValue.swift in Sources */,
+				3B5EDB0C29A0C84D005D3E49 /* UseCaseProvider.swift in Sources */,
+				3B5EDB0E29A0C860005D3E49 /* FeedsUseCase.swift in Sources */,
 				3B5EDAFF29A0BAAF005D3E49 /* Network.swift in Sources */,
 				3B5EDB0129A0BBD2005D3E49 /* NetworkProvider.swift in Sources */,
+				3B5EDB1029A0C9C3005D3E49 /* Cache.swift in Sources */,
 				3B5EDB0329A0BC48005D3E49 /* FeedNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
     }
     
     public func makeFeedsUseCase() -> Domain.FeedUseCase {
-        return
+        return FeedsUseCase(network: networkProvider.makeFeedsUseCase(),
+                            cache: Cache())
     }
 }

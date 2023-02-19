@@ -8,13 +8,15 @@
 import Foundation
 
 public struct Feed: Decodable {
-  let action: String
-  let repo: Repo
-  let actor: Actor
-
-  private enum CodingKeys: String, CodingKey {
-    case action = "type"
-    case repo
-    case actor
-  }
+    public let id: String
+    public let action: String
+    public let repo: Repo
+    public let actor: Actor
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case action = "type"
+        case repo
+        case actor
+    }
 }

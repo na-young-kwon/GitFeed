@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 public protocol FeedUseCase {
-    func feeds() -> Observable<[Feed]>
+    func feeds(for: [Feed]) -> Observable<[Feed]>
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Repo: Codable {
-  let name: String
+public struct Repo: Codable {
+    public let name: String
 }

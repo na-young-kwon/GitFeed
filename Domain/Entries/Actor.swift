@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Actor: Codable {
-  let name: String
-  let avatar: URL
-
-  enum CodingKeys: String, CodingKey {
-    case name = "display_login"
-    case avatar = "avatar_url"
-  }
+public struct Actor: Codable {
+    public let name: String
+    public let avatar: URL
+    
+    private enum CodingKeys: String, CodingKey {
+        case name = "display_login"
+        case avatar = "avatar_url"
+    }
 }

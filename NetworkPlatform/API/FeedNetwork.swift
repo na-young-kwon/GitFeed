@@ -15,8 +15,8 @@ public final class FeedNetwork {
         self.network = network
     }
     
-    public func fetchFeeds(name: String) -> Observable<[Feed]> {
-        return network.getItems("/repos/\(name)/events")
+    public func fetchFeeds() -> Observable<[Feed]> {
+        return network.getItems("/repos/na-young-kwon/GitFeed/events")
     }
     
     // 추후 추가 - 개별 아이템 가져오기
