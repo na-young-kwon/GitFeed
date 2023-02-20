@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5B0E0529A2707F00AECF22 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0429A2707F00AECF22 /* FeedViewModel.swift */; };
+		3B5B0E0729A321BD00AECF22 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0629A321BD00AECF22 /* ActivityIndicator.swift */; };
+		3B5B0E0929A33C9E00AECF22 /* FeedNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0829A33C9E00AECF22 /* FeedNavigator.swift */; };
+		3B5B0E0B29A354F300AECF22 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */; };
+		3B5B0E0D29A355C100AECF22 /* FeedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -27,7 +32,7 @@
 		3B5EDB1329A0D3AB005D3E49 /* CacheValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDB1229A0D3AB005D3E49 /* CacheValue.swift */; };
 		3B85F210299F6F5000408FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F20F299F6F5000408FA8 /* AppDelegate.swift */; };
 		3B85F212299F6F5000408FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F211299F6F5000408FA8 /* SceneDelegate.swift */; };
-		3B85F214299F6F5000408FA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F213299F6F5000408FA8 /* ViewController.swift */; };
+		3B85F214299F6F5000408FA8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B85F213299F6F5000408FA8 /* FeedViewController.swift */; };
 		3B85F217299F6F5000408FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B85F215299F6F5000408FA8 /* Main.storyboard */; };
 		3B85F219299F6F5000408FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B85F218299F6F5000408FA8 /* Assets.xcassets */; };
 		3B85F21C299F6F5000408FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B85F21A299F6F5000408FA8 /* LaunchScreen.storyboard */; };
@@ -72,6 +77,11 @@
 
 /* Begin PBXFileReference section */
 		02BFD175FE5F14F8E9D7AADD /* Pods-GitFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitFeed.debug.xcconfig"; path = "Target Support Files/Pods-GitFeed/Pods-GitFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		3B5B0E0429A2707F00AECF22 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		3B5B0E0629A321BD00AECF22 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = GitFeed/Scenes/ActivityIndicator.swift; sourceTree = SOURCE_ROOT; };
+		3B5B0E0829A33C9E00AECF22 /* FeedNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavigator.swift; sourceTree = "<group>"; };
+		3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewModel.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -91,7 +101,7 @@
 		3B85F20C299F6F5000408FA8 /* GitFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B85F20F299F6F5000408FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B85F211299F6F5000408FA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B85F213299F6F5000408FA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B85F213299F6F5000408FA8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3B85F216299F6F5000408FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B85F218299F6F5000408FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B85F21B299F6F5000408FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -265,7 +275,10 @@
 		3B85F224299F764100408FA8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3B85F213299F6F5000408FA8 /* ViewController.swift */,
+				3B85F213299F6F5000408FA8 /* FeedViewController.swift */,
+				3B5B0E0429A2707F00AECF22 /* FeedViewModel.swift */,
+				3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */,
+				3B5B0E0829A33C9E00AECF22 /* FeedNavigator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -281,6 +294,8 @@
 		3B85F227299F76C000408FA8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3B5B0E0629A321BD00AECF22 /* ActivityIndicator.swift */,
+				3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */,
 			);
 			name = Utility;
 			path = "New Group/Utility";
@@ -580,7 +595,12 @@
 			files = (
 				3B85F22B299F773F00408FA8 /* Application.swift in Sources */,
 				3B85F229299F76F000408FA8 /* ViewModelType.swift in Sources */,
-				3B85F214299F6F5000408FA8 /* ViewController.swift in Sources */,
+				3B5B0E0529A2707F00AECF22 /* FeedViewModel.swift in Sources */,
+				3B5B0E0D29A355C100AECF22 /* FeedItemViewModel.swift in Sources */,
+				3B85F214299F6F5000408FA8 /* FeedViewController.swift in Sources */,
+				3B5B0E0729A321BD00AECF22 /* ActivityIndicator.swift in Sources */,
+				3B5B0E0929A33C9E00AECF22 /* FeedNavigator.swift in Sources */,
+				3B5B0E0B29A354F300AECF22 /* Observable+Extension.swift in Sources */,
 				3B85F210299F6F5000408FA8 /* AppDelegate.swift in Sources */,
 				3B85F212299F6F5000408FA8 /* SceneDelegate.swift in Sources */,
 			);
@@ -636,6 +656,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -669,6 +690,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,6 +723,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -734,6 +757,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

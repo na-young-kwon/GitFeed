@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Domain
+import NetworkPlatform
 
 final class Application {
     static let shared = Application()
     
+    private let networkUseCaseProvider: Domain.UseCaseProvider
+    
     private init() {
-        
+        self.networkUseCaseProvider = NetworkPlatform.UseCaseProvider()
     }
     
     func configureMainInterface(in window: UIWindow) {
@@ -20,6 +24,10 @@ final class Application {
         let controller = UIViewController()
         let navigationController = UINavigationController(rootViewController: controller)
         
-        window.rootViewController = navigationController
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+            controller
+        ]
+        window.rootViewController = tabBarController
     }
 }
