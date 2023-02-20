@@ -21,13 +21,20 @@ final class Application {
     func configureMainInterface(in window: UIWindow) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let controller = UIViewController()
-        let navigationController = UINavigationController(rootViewController: controller)
+        let navigationController = UINavigationController()
+//        navigationController.tabBarItem = UITabBarItem(title: "Network",
+//                image: UIImage(named: "Toolbox"),
+//                selectedImage: nil)
         
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [
-            controller
-        ]
-        window.rootViewController = tabBarController
+        let feedNavigator = DefaultFeedNavigator(storyBoard: storyboard,
+                                                 navigationController: navigationController,
+                                                 services: networkUseCaseProvider)
+//        let tabBarController = UITabBarController()
+//        tabBarController.viewControllers = [
+//            navigationController
+//        ]
+        window.rootViewController = navigationController
+        
+        feedNavigator.toFeeds()
     }
 }

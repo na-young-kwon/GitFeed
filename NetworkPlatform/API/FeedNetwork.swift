@@ -16,7 +16,7 @@ public final class FeedNetwork {
     }
     
     public func fetchFeeds() -> Observable<[Feed]> {
-        return network.getItems("/repos/na-young-kwon/GitFeed/events")
+        return network.getItems("/repos/oksunwoo/Turtle_Neck")
     }
     
     // 추후 추가 - 개별 아이템 가져오기

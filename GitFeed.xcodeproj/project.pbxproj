@@ -13,6 +13,7 @@
 		3B5B0E0B29A354F300AECF22 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */; };
 		3B5B0E0D29A355C100AECF22 /* FeedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */; };
 		3B5B0E0F29A35E0200AECF22 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E0E29A35E0200AECF22 /* FeedTableViewCell.swift */; };
+		3B5B0E1329A3632500AECF22 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1229A3632500AECF22 /* Reusable.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -84,6 +85,7 @@
 		3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewModel.swift; sourceTree = "<group>"; };
 		3B5B0E0E29A35E0200AECF22 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		3B5B0E1229A3632500AECF22 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		3B85F227299F76C000408FA8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3B5B0E1229A3632500AECF22 /* Reusable.swift */,
 				3B5B0E0629A321BD00AECF22 /* ActivityIndicator.swift */,
 				3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */,
 			);
@@ -596,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5B0E1329A3632500AECF22 /* Reusable.swift in Sources */,
 				3B85F22B299F773F00408FA8 /* Application.swift in Sources */,
 				3B85F229299F76F000408FA8 /* ViewModelType.swift in Sources */,
 				3B5B0E0529A2707F00AECF22 /* FeedViewModel.swift in Sources */,

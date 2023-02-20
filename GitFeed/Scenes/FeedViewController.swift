@@ -32,7 +32,8 @@ class FeedViewController: UIViewController {
 
     private func bindViewModel() {
         // ?
-        assert(viewModel != nil)
+//        assert(viewModel != nil)
+
         // mapToVoid?
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear))
             .mapToVoid()
@@ -46,7 +47,8 @@ class FeedViewController: UIViewController {
                                         selection: tableView.rx.itemSelected.asDriver())
         
         let output = viewModel.transform(input: input)
-        
+            
+        // bind feeds to tableView
         output.feeds.drive(tableView.rx.items(cellIdentifier: "FeedTableViewCell", cellType: FeedTableViewCell.self)) { _, viewModel, cell in
             cell.bind(viewModel)
         }.disposed(by: disposeBag)
