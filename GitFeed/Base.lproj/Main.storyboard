@@ -21,13 +21,51 @@
                                 <rect key="frame" x="0.0" y="73" width="393" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uf9-Mg-sI3">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" id="uf9-Mg-sI3" customClass="FeedTableViewCell" customModule="GitFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uf9-Mg-sI3" id="Znr-EZ-tTC">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-qI-QXg">
+                                                    <rect key="frame" x="5" y="5" width="41.333333333333336" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDc-Va-BFs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-qg-6hy">
+                                                            <rect key="frame" x="0.0" y="30.666666666666664" width="41.333333333333336" height="20.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Epz-rT-bix">
+                                                    <rect key="frame" x="335" y="3" width="55" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Epz-rT-bix" secondAttribute="height" multiplier="1:1" id="O2a-YH-Z1W"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Epz-rT-bix" secondAttribute="trailing" constant="3" id="6dI-IX-buZ"/>
+                                                <constraint firstItem="Epz-rT-bix" firstAttribute="top" secondItem="Znr-EZ-tTC" secondAttribute="top" constant="3" id="6si-WB-4NP"/>
+                                                <constraint firstAttribute="bottom" secondItem="R8S-qI-QXg" secondAttribute="bottom" constant="5" id="7v6-5X-fx7"/>
+                                                <constraint firstItem="R8S-qI-QXg" firstAttribute="leading" secondItem="Znr-EZ-tTC" secondAttribute="leading" constant="5" id="N0b-6V-e6U"/>
+                                                <constraint firstItem="R8S-qI-QXg" firstAttribute="top" secondItem="Znr-EZ-tTC" secondAttribute="top" constant="5" id="Zdq-ji-XMI"/>
+                                                <constraint firstAttribute="bottom" secondItem="Epz-rT-bix" secondAttribute="bottom" constant="3" id="gZc-xU-l8o"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="dXD-qg-6hy" id="hw6-Aj-5Ge"/>
+                                            <outlet property="profileImage" destination="Epz-rT-bix" id="cpl-z0-ovh"/>
+                                            <outlet property="titleLabel" destination="CDc-Va-BFs" id="Kww-jM-FFa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

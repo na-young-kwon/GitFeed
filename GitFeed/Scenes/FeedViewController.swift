@@ -20,6 +20,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         
         configureTableView()
+        bindViewModel()
     }
 
     private func configureTableView() {
@@ -32,7 +33,30 @@ class FeedViewController: UIViewController {
     private func bindViewModel() {
         // ?
         assert(viewModel != nil)
+        // mapToVoid?
+        let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear))
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
+        let pull = tableView.refreshControl!.rx
+            .controlEvent(.valueChanged)
+            .asDriver()
         
+        // merge?
+        let input = FeedViewModel.Input(trigger: Driver.merge(viewWillAppear, pull),
+                                        selection: tableView.rx.itemSelected.asDriver())
+        
+        let output = viewModel.transform(input: input)
+        
+        output.feeds.drive(tableView.rx.items(cellIdentifier: "FeedTableViewCell", cellType: FeedTableViewCell.self)) { _, viewModel, cell in
+            cell.bind(viewModel)
+        }.disposed(by: disposeBag)
+        
+        output.fetching
+            .drive(tableView.refreshControl!.rx.isRefreshing)
+            .disposed(by: disposeBag)
+        output.selectedFeed
+            .drive()
+            .disposed(by: disposeBag)
     }
 }
 
