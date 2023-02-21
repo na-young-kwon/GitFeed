@@ -70,13 +70,13 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="YvV-UX-DJv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pTh-DT-ueA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="4L2-6W-4Lc"/>
-                            <constraint firstItem="pTh-DT-ueA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KcL-fb-mAf"/>
-                            <constraint firstItem="pTh-DT-ueA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sRh-YI-e4U"/>
-                            <constraint firstItem="pTh-DT-ueA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xbP-vH-aee"/>
+                            <constraint firstItem="pTh-DT-ueA" firstAttribute="top" secondItem="YvV-UX-DJv" secondAttribute="top" constant="14" id="4L2-6W-4Lc"/>
+                            <constraint firstItem="pTh-DT-ueA" firstAttribute="bottom" secondItem="YvV-UX-DJv" secondAttribute="bottom" id="KcL-fb-mAf"/>
+                            <constraint firstItem="pTh-DT-ueA" firstAttribute="trailing" secondItem="YvV-UX-DJv" secondAttribute="trailing" id="sRh-YI-e4U"/>
+                            <constraint firstItem="pTh-DT-ueA" firstAttribute="leading" secondItem="YvV-UX-DJv" secondAttribute="leading" id="xbP-vH-aee"/>
                         </constraints>
                     </view>
                     <connections>

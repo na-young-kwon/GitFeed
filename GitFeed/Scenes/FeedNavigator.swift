@@ -30,8 +30,8 @@ class DefaultFeedNavigator: FeedNavigator {
     
     func toFeeds() {
         let controller = storyBoard.instantiateViewController(ofType: FeedViewController.self)
-        controller.viewModel = FeedViewModel(useCase: services.makeFeedsUseCase(),
-                                             navigator: self)
+//        controller.viewModel = FeedViewModel(useCase: services.makeFeedsUseCase(),
+//                                             navigator: self)
         
         navigationController.pushViewController(controller, animated: true)
     }

@@ -32,7 +32,7 @@ class FeedViewController: UIViewController {
 
     private func bindViewModel() {
         // ?
-//        assert(viewModel != nil)
+        assert(viewModel != nil)
 
         // mapToVoid?
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear))

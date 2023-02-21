@@ -22,19 +22,12 @@ final class Application {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let navigationController = UINavigationController()
-//        navigationController.tabBarItem = UITabBarItem(title: "Network",
-//                image: UIImage(named: "Toolbox"),
-//                selectedImage: nil)
-        
+
         let feedNavigator = DefaultFeedNavigator(storyBoard: storyboard,
                                                  navigationController: navigationController,
                                                  services: networkUseCaseProvider)
-//        let tabBarController = UITabBarController()
-//        tabBarController.viewControllers = [
-//            navigationController
-//        ]
         window.rootViewController = navigationController
-        
+        window.makeKeyAndVisible()
         feedNavigator.toFeeds()
     }
 }

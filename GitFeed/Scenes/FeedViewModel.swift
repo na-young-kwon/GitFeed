@@ -22,11 +22,9 @@ final class FeedViewModel: ViewModelType {
 //        let error: Driver<Error>
     }
     private let useCase: FeedUseCase
-    private let navigator: FeedNavigator
     
-    init(useCase: FeedUseCase, navigator: FeedNavigator) {
+    init(useCase: FeedUseCase) {
         self.useCase = useCase
-        self.navigator = navigator
     }
     
     func transform(input: Input) -> Output {
