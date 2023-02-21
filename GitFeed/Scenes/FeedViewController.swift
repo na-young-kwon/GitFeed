@@ -21,6 +21,7 @@ class FeedViewController: UIViewController {
         
         configureTableView()
         bindViewModel()
+        navigationItem.title = "na-young-kwon/GitFeed"
     }
 
     private func configureTableView() {
@@ -28,6 +29,7 @@ class FeedViewController: UIViewController {
         tableView.estimatedRowHeight = 64
         // ?
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "FeedTableViewCell")
     }
 
     private func bindViewModel() {
@@ -49,7 +51,11 @@ class FeedViewController: UIViewController {
         let output = viewModel.transform(input: input)
             
         // bind feeds to tableView
-        output.feeds.drive(tableView.rx.items(cellIdentifier: "FeedTableViewCell", cellType: FeedTableViewCell.self)) { _, viewModel, cell in
+        output.feeds
+            .drive(tableView.rx.items(
+                cellIdentifier: FeedTableViewCell.reuseID,
+                cellType: FeedTableViewCell.self
+            )) { _, viewModel, cell in
             cell.bind(viewModel)
         }.disposed(by: disposeBag)
         

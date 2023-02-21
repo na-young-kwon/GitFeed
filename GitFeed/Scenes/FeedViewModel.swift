@@ -19,7 +19,7 @@ final class FeedViewModel: ViewModelType {
         let fetching: Driver<Bool>
         let feeds: Driver<[FeedItemViewModel]>
         let selectedFeed: Driver<Feed>
-//        let error: Driver<Error>
+        let error: Driver<Error>
     }
     private let useCase: FeedUseCase
     
@@ -29,24 +29,29 @@ final class FeedViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         let activityIndicator = ActivityIndicator()
-        
+        let errorTracker = ErrorTracker()
         // flatMapLatest 왜쓰는거지
         // MapLatest는 왜인지 이유를 알겠음 - 가장 마지막 트리거를 남기기 위해서
         // 근데 flat은 왜 해줘야 하는지?
         let feeds = input.trigger.flatMapLatest {
             return self.useCase.feeds(for: [])
                 .trackActivity(activityIndicator)
+                .trackError(errorTracker)
                 .asDriverOnErrorJustComplete()
                 .map { feeds in
                     feeds.map { FeedItemViewModel(feed: $0) }
                 }
         }
         let fetching = activityIndicator.asDriver()
+        let errors = errorTracker.asDriver()
         let selectedFeed = input.selection
             .withLatestFrom(feeds) { (indexPath, feeds) -> Feed in
                 return feeds[indexPath.row].feed
             }
         
-        return Output(fetching: fetching, feeds: feeds, selectedFeed: selectedFeed)
+        return Output(fetching: fetching,
+                      feeds: feeds,
+                      selectedFeed: selectedFeed,
+                      error: errors)
     }
 }

@@ -16,6 +16,7 @@
 		3B5B0E1529A49B5000AECF22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1429A49B5000AECF22 /* Coordinator.swift */; };
 		3B5B0E1729A49B9800AECF22 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1629A49B9800AECF22 /* AppCoordinator.swift */; };
 		3B5B0E1929A49C1F00AECF22 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */; };
+		3B5B0E1B29A4C42800AECF22 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,6 +90,7 @@
 		3B5B0E1429A49B5000AECF22 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3B5B0E1629A49B9800AECF22 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5B0E1229A3632500AECF22 /* Reusable.swift */,
+				3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */,
 				3B5B0E0629A321BD00AECF22 /* ActivityIndicator.swift */,
 				3B5B0E0A29A354F300AECF22 /* Observable+Extension.swift */,
 			);
@@ -609,6 +612,7 @@
 				3B5B0E0D29A355C100AECF22 /* FeedItemViewModel.swift in Sources */,
 				3B5B0E1729A49B9800AECF22 /* AppCoordinator.swift in Sources */,
 				3B85F214299F6F5000408FA8 /* FeedViewController.swift in Sources */,
+				3B5B0E1B29A4C42800AECF22 /* ErrorTracker.swift in Sources */,
 				3B5B0E0729A321BD00AECF22 /* ActivityIndicator.swift in Sources */,
 				3B5B0E1929A49C1F00AECF22 /* FeedCoordinator.swift in Sources */,
 				3B5B0E0B29A354F300AECF22 /* Observable+Extension.swift in Sources */,
