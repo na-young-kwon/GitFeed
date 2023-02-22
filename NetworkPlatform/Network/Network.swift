@@ -22,9 +22,10 @@ final class Network<T: Decodable> {
     
     // "oksunwoo/Turtle_Neck"
     // https://api.github.com/repos/\(urlString)/events
+    // users/na-young-kwon/repos
     
     func getItems(_ path: String) -> Observable<[T]> {
-        let absolutePath = "\(endPoint)/\(path)/events"
+        let absolutePath = "\(endPoint)/\(path)"
         return RxAlamofire
             .data(.get, absolutePath)
             .debug()

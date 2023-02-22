@@ -9,16 +9,20 @@ import Domain
 import RxSwift
 
 public final class FeedNetwork {
-    private let network: Network<Feed>
+    private let network: Network<Repository>
     
-    init(network: Network<Feed>) {
+    init(network: Network<Repository>) {
         self.network = network
     }
     
-    public func fetchFeeds() -> Observable<[Feed]> {
-        return network.getItems("repos/na-young-kwon/GitFeed")
+    public func fetchAllRepo() -> Observable<[Repository]> {
+        return network.getItems("users/na-young-kwon/repos")
     }
     
+//    public func fetchFeeds() -> Observable<[Feed]> {
+//        return network.getItems("users/na-young-kwon/repos")
+//    }
+//
     // 추후 추가 - 개별 아이템 가져오기
 //    public func fetchFeed() -> Observable<Feed> {
 //        return network.getItem(<#T##path: String##String#>, itemId: <#T##String#>)

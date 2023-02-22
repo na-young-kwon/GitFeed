@@ -17,14 +17,12 @@
 		3B5B0E1729A49B9800AECF22 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1629A49B9800AECF22 /* AppCoordinator.swift */; };
 		3B5B0E1929A49C1F00AECF22 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */; };
 		3B5B0E1B29A4C42800AECF22 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */; };
+		3B5B0E2029A5D98100AECF22 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1F29A5D98100AECF22 /* Repository.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B5EDACE29A0B6E1005D3E49 /* FeedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */; };
 		3B5EDAD029A0B6E7005D3E49 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDACF29A0B6E7005D3E49 /* UseCaseProvider.swift */; };
-		3B5EDAD229A0B6EE005D3E49 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDAD129A0B6EE005D3E49 /* Repo.swift */; };
-		3B5EDAD429A0B6F3005D3E49 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDAD329A0B6F3005D3E49 /* Actor.swift */; };
-		3B5EDAD629A0B6FA005D3E49 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EDAD529A0B6FA005D3E49 /* Feed.swift */; };
 		3B5EDAF329A0BA49005D3E49 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAF229A0BA49005D3E49 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAF629A0BA49005D3E49 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDAF029A0BA49005D3E49 /* NetworkPlatform.framework */; };
 		3B5EDAF729A0BA49005D3E49 /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDAF029A0BA49005D3E49 /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,13 +89,11 @@
 		3B5B0E1629A49B9800AECF22 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		3B5B0E1F29A5D98100AECF22 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
 		3B5EDACF29A0B6E7005D3E49 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
-		3B5EDAD129A0B6EE005D3E49 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
-		3B5EDAD329A0B6F3005D3E49 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
-		3B5EDAD529A0B6FA005D3E49 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3B5EDAF029A0BA49005D3E49 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAF229A0BA49005D3E49 /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		3B5EDAFE29A0BAAF005D3E49 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -178,9 +174,7 @@
 		3B5EDACC29A0B6C9005D3E49 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				3B5EDAD529A0B6FA005D3E49 /* Feed.swift */,
-				3B5EDAD329A0B6F3005D3E49 /* Actor.swift */,
-				3B5EDAD129A0B6EE005D3E49 /* Repo.swift */,
+				3B5B0E1F29A5D98100AECF22 /* Repository.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -579,11 +573,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B5EDAD229A0B6EE005D3E49 /* Repo.swift in Sources */,
-				3B5EDAD629A0B6FA005D3E49 /* Feed.swift in Sources */,
 				3B5EDAD029A0B6E7005D3E49 /* UseCaseProvider.swift in Sources */,
 				3B5EDACE29A0B6E1005D3E49 /* FeedUseCase.swift in Sources */,
-				3B5EDAD429A0B6F3005D3E49 /* Actor.swift in Sources */,
+				3B5B0E2029A5D98100AECF22 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,8 +17,8 @@ final class FeedViewModel: ViewModelType {
     }
     struct Output {
         let fetching: Driver<Bool>
-        let feeds: Driver<[FeedItemViewModel]>
-        let selectedFeed: Driver<Feed>
+        let repos: Driver<[FeedItemViewModel]>
+        let selectedFeed: Driver<Repository>
         let error: Driver<Error>
     }
     private let useCase: FeedUseCase
@@ -33,24 +33,24 @@ final class FeedViewModel: ViewModelType {
         // flatMapLatest 왜쓰는거지
         // MapLatest는 왜인지 이유를 알겠음 - 가장 마지막 트리거를 남기기 위해서
         // 근데 flat은 왜 해줘야 하는지?
-        let feeds = input.trigger.flatMapLatest {
-            return self.useCase.feeds(for: [])
+        let repos = input.trigger.flatMapLatest {
+            return self.useCase.repositories()
                 .trackActivity(activityIndicator)
                 .trackError(errorTracker)
                 .asDriverOnErrorJustComplete()
-                .map { feeds in
-                    feeds.map { FeedItemViewModel(feed: $0) }
+                .map { repos in
+                    repos.map { FeedItemViewModel(repo: $0) }
                 }
         }
         let fetching = activityIndicator.asDriver()
         let errors = errorTracker.asDriver()
         let selectedFeed = input.selection
-            .withLatestFrom(feeds) { (indexPath, feeds) -> Feed in
-                return feeds[indexPath.row].feed
+            .withLatestFrom(repos) { (indexPath, repos) -> Repository in
+                return repos[indexPath.row].repo
             }
         
         return Output(fetching: fetching,
-                      feeds: feeds,
+                      repos: repos,
                       selectedFeed: selectedFeed,
                       error: errors)
     }

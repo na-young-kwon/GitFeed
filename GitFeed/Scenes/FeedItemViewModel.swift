@@ -9,8 +9,8 @@ import Foundation
 import Domain
 
 final class FeedItemViewModel {
-    let feed: Feed
-    init(feed: Feed) {
-        self.feed = feed
+    let repo: Repository
+    init(repo: Repository) {
+        self.repo = repo
     }
 }

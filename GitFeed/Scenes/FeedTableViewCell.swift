@@ -20,7 +20,6 @@ class FeedTableViewCell: UITableViewCell {
     
     private let profileImage: UIImageView = {
        let imageView = UIImageView()
-//        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -37,9 +36,9 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     func bind(_ viewModel: FeedItemViewModel) {
-        titleLabel.text = viewModel.feed.action
-        detailLabel.text = viewModel.feed.actor.name
-        setImage(fromUrl: viewModel.feed.actor.avatar)
+        titleLabel.text = viewModel.repo.name
+        detailLabel.text = viewModel.repo.owner.name
+        setImage(fromUrl: viewModel.repo.owner.avatar)
     }
     
     private func configureHierarchy() {

@@ -50,8 +50,8 @@ class FeedViewController: UIViewController {
         
         let output = viewModel.transform(input: input)
             
-        // bind feeds to tableView
-        output.feeds
+        // bind repos to tableView
+        output.repos
             .drive(tableView.rx.items(
                 cellIdentifier: FeedTableViewCell.reuseID,
                 cellType: FeedTableViewCell.self

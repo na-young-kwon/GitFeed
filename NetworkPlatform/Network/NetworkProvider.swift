@@ -15,7 +15,7 @@ final class NetworkProvider {
     }
     
     public func makeFeedsUseCase() -> FeedNetwork {
-        let network = Network<Feed>(apiEndpoint)
+        let network = Network<Repository>(apiEndpoint)
         return FeedNetwork(network: network)
     }
 }
