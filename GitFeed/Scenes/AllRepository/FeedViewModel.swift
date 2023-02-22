@@ -50,11 +50,11 @@ final class FeedViewModel: ViewModelType {
             .withLatestFrom(repos) { (indexPath, repos) -> Repository in
                 return repos[indexPath.row].repo
             }
-            .do { _ in
-                self.coordinator.toDetailView()
-            }
+//            .do { _ in
+//                self.coordinator.toDetailView()
+//            }
         // 이건 왜 안되는거지?..?
-//            .do(onNext: coordinator.toDetailView)
+            .do(onNext: coordinator.detail)
         
         return Output(fetching: fetching,
                       repos: repos,

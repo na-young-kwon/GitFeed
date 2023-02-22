@@ -12,6 +12,7 @@ import NetworkPlatform
 final class FeedCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    private let service = UseCaseProvider()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -21,15 +22,15 @@ final class FeedCoordinator: Coordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(ofType: FeedViewController.self)
         
-        controller.viewModel = FeedViewModel(useCase: UseCaseProvider().makeFeedsUseCase(), coordinator: self)
+        controller.viewModel = FeedViewModel(useCase: service.makeFeedsUseCase(), coordinator: self)
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func toDetailView() {
+    
+    func detail(_ repo: Repository) {
         let detailCoordinator = DetailCoordinator(parentCoordinator: self,
                                                   navigationController: navigationController)
-        
         childCoordinators.append(detailCoordinator)
-        detailCoordinator.start()
+        detailCoordinator.start(with: repo)
     }
 }

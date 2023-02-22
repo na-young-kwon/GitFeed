@@ -11,16 +11,26 @@ import RxSwift
 import RxCocoa
 
 final class DetailViewModel: ViewModelType {
+    private let repo: Repository
+    private let useCase: FeedUseCase
+    
     struct Input {
-        
+        let viewWillAppear: Driver<Void>
     }
     
     struct Output {
-        
+        let repo: Driver<Repository>
+    }
+    
+    init(repo: Repository, useCase: FeedUseCase) {
+        self.repo = repo
+        self.useCase = useCase
     }
     
     func transform(input: Input) -> Output {
-        
-        return Output()
+        let repo = Observable.just(repo)
+            .asDriverOnErrorJustComplete()
+            
+        return Output(repo: repo)
     }
 }

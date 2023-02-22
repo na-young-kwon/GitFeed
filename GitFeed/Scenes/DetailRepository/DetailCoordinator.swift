@@ -6,23 +6,28 @@
 //
 
 import UIKit
+import Domain
+import NetworkPlatform
 
 final class DetailCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    
-    private weak var parentCoordinator: Coordinator?
-    
     var navigationController: UINavigationController
+    private weak var parentCoordinator: Coordinator?
     
     init(parentCoordinator: Coordinator? = nil, navigationController: UINavigationController) {
         self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
     }
     
-    func start() {
+    func start() { }
+    
+    func start(with repo: Repository) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(ofType: DetailViewController.self)
+        let viewModel = DetailViewModel(repo: repo, useCase: UseCaseProvider().makeFeedsUseCase())
+        
         controller.coordinator = self
+        controller.viewModel = viewModel
         navigationController.pushViewController(controller, animated: true)
     }
     

@@ -10,12 +10,14 @@ import Foundation
 public struct Repository: Decodable {
     public let id: Int
     public let name: String
+    public let stars: Int
+    public let forks: Int
     public let owner: Owner
     
     private enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case owner
+        case id, name, owner
+        case forks = "forks_count"
+        case stars = "stargazers_count"
     }
 }
 
