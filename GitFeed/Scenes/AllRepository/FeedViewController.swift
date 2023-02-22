@@ -14,12 +14,14 @@ class FeedViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     var viewModel: FeedViewModel!
+    weak var coordinator: FeedCoordinator?
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Repository"
+        navigationItem.title = "Repositories"
+        navigationController?.navigationBar.prefersLargeTitles = true
         configureTableView()
         bindViewModel()
     }
@@ -60,7 +62,7 @@ class FeedViewController: UIViewController {
         output.fetching
             .drive(tableView.refreshControl!.rx.isRefreshing)
             .disposed(by: disposeBag)
-        output.selectedFeed
+        output.selectedRepo
             .drive()
             .disposed(by: disposeBag)
     }

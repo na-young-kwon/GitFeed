@@ -19,6 +19,9 @@
 		3B5B0E1B29A4C42800AECF22 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */; };
 		3B5B0E2029A5D98100AECF22 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1F29A5D98100AECF22 /* Repository.swift */; };
 		3B5B0E2429A5FA9D00AECF22 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */; };
+		3B5B0E2B29A5FE8200AECF22 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E2A29A5FE8200AECF22 /* DetailViewController.swift */; };
+		3B5B0E2D29A5FEBE00AECF22 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E2C29A5FEBE00AECF22 /* DetailViewModel.swift */; };
+		3B5B0E2F29A6003D00AECF22 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E2E29A6003D00AECF22 /* DetailCoordinator.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +95,9 @@
 		3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		3B5B0E1F29A5D98100AECF22 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedTableViewCell.xib; path = /Users/gwonnayeong/Desktop/GitFeed/GitFeed/Scenes/FeedTableViewCell.xib; sourceTree = "<absolute>"; };
+		3B5B0E2A29A5FE8200AECF22 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3B5B0E2C29A5FEBE00AECF22 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3B5B0E2E29A6003D00AECF22 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -154,6 +160,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5B0E2829A5FE1B00AECF22 /* AllRepository */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */,
+				3B85F213299F6F5000408FA8 /* FeedViewController.swift */,
+				3B5B0E0429A2707F00AECF22 /* FeedViewModel.swift */,
+				3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */,
+				3B5B0E0E29A35E0200AECF22 /* FeedTableViewCell.swift */,
+				3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */,
+			);
+			path = AllRepository;
+			sourceTree = "<group>";
+		};
+		3B5B0E2929A5FE2F00AECF22 /* DetailRepository */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E2A29A5FE8200AECF22 /* DetailViewController.swift */,
+				3B5B0E2E29A6003D00AECF22 /* DetailCoordinator.swift */,
+				3B5B0E2C29A5FEBE00AECF22 /* DetailViewModel.swift */,
+			);
+			path = DetailRepository;
+			sourceTree = "<group>";
+		};
 		3B5EDAC029A0B6BE005D3E49 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,12 +308,8 @@
 		3B85F224299F764100408FA8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3B85F213299F6F5000408FA8 /* FeedViewController.swift */,
-				3B5B0E0E29A35E0200AECF22 /* FeedTableViewCell.swift */,
-				3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */,
-				3B5B0E0429A2707F00AECF22 /* FeedViewModel.swift */,
-				3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */,
-				3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */,
+				3B5B0E2829A5FE1B00AECF22 /* AllRepository */,
+				3B5B0E2929A5FE2F00AECF22 /* DetailRepository */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -613,8 +638,11 @@
 				3B5B0E1929A49C1F00AECF22 /* FeedCoordinator.swift in Sources */,
 				3B5B0E0B29A354F300AECF22 /* Observable+Extension.swift in Sources */,
 				3B85F210299F6F5000408FA8 /* AppDelegate.swift in Sources */,
+				3B5B0E2F29A6003D00AECF22 /* DetailCoordinator.swift in Sources */,
+				3B5B0E2B29A5FE8200AECF22 /* DetailViewController.swift in Sources */,
 				3B85F212299F6F5000408FA8 /* SceneDelegate.swift in Sources */,
 				3B5B0E0F29A35E0200AECF22 /* FeedTableViewCell.swift in Sources */,
+				3B5B0E2D29A5FEBE00AECF22 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

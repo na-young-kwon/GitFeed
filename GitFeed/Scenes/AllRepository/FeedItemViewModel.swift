@@ -10,6 +10,7 @@ import Domain
 
 final class FeedItemViewModel {
     let repo: Repository
+    
     init(repo: Repository) {
         self.repo = repo
     }

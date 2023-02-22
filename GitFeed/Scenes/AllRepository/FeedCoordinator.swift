@@ -13,7 +13,7 @@ final class FeedCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     
-    init(parentCoordinator: AppCoordinator?, navigationController: UINavigationController) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
@@ -21,8 +21,15 @@ final class FeedCoordinator: Coordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(ofType: FeedViewController.self)
         
-        controller.viewModel = FeedViewModel(useCase: UseCaseProvider().makeFeedsUseCase())
-        
+        controller.viewModel = FeedViewModel(useCase: UseCaseProvider().makeFeedsUseCase(), coordinator: self)
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func toDetailView() {
+        let detailCoordinator = DetailCoordinator(parentCoordinator: self,
+                                                  navigationController: navigationController)
+        
+        childCoordinators.append(detailCoordinator)
+        detailCoordinator.start()
     }
 }

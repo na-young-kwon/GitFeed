@@ -18,13 +18,15 @@ final class FeedViewModel: ViewModelType {
     struct Output {
         let fetching: Driver<Bool>
         let repos: Driver<[FeedItemViewModel]>
-        let selectedFeed: Driver<Repository>
+        let selectedRepo: Driver<Repository>
         let error: Driver<Error>
     }
     private let useCase: FeedUseCase
+    private let coordinator: FeedCoordinator
     
-    init(useCase: FeedUseCase) {
+    init(useCase: FeedUseCase, coordinator: FeedCoordinator) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
     func transform(input: Input) -> Output {
@@ -44,14 +46,19 @@ final class FeedViewModel: ViewModelType {
         }
         let fetching = activityIndicator.asDriver()
         let errors = errorTracker.asDriver()
-        let selectedFeed = input.selection
+        let selectedRepo = input.selection
             .withLatestFrom(repos) { (indexPath, repos) -> Repository in
                 return repos[indexPath.row].repo
             }
+            .do { _ in
+                self.coordinator.toDetailView()
+            }
+        // 이건 왜 안되는거지?..?
+//            .do(onNext: coordinator.toDetailView)
         
         return Output(fetching: fetching,
                       repos: repos,
-                      selectedFeed: selectedFeed,
+                      selectedRepo: selectedRepo,
                       error: errors)
     }
 }

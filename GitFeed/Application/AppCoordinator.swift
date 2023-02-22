@@ -20,8 +20,7 @@ class AppCoordinator: Coordinator {
     }
     
     func pushFeedViewController() {
-        let feedCoordinator = FeedCoordinator(parentCoordinator: self,
-                                              navigationController: navigationController)
+        let feedCoordinator = FeedCoordinator(navigationController: navigationController)
         childCoordinators.append(feedCoordinator)
         feedCoordinator.start()
     }
