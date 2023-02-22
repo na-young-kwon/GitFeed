@@ -18,6 +18,7 @@
 		3B5B0E1929A49C1F00AECF22 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */; };
 		3B5B0E1B29A4C42800AECF22 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */; };
 		3B5B0E2029A5D98100AECF22 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E1F29A5D98100AECF22 /* Repository.swift */; };
+		3B5B0E2429A5FA9D00AECF22 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -90,6 +91,7 @@
 		3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		3B5B0E1A29A4C42800AECF22 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		3B5B0E1F29A5D98100AECF22 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedTableViewCell.xib; path = /Users/gwonnayeong/Desktop/GitFeed/GitFeed/Scenes/FeedTableViewCell.xib; sourceTree = "<absolute>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				3B85F213299F6F5000408FA8 /* FeedViewController.swift */,
 				3B5B0E0E29A35E0200AECF22 /* FeedTableViewCell.swift */,
+				3B5B0E2329A5F4F300AECF22 /* FeedTableViewCell.xib */,
 				3B5B0E0429A2707F00AECF22 /* FeedViewModel.swift */,
 				3B5B0E0C29A355C100AECF22 /* FeedItemViewModel.swift */,
 				3B5B0E1829A49C1F00AECF22 /* FeedCoordinator.swift */,
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B85F21C299F6F5000408FA8 /* LaunchScreen.storyboard in Resources */,
+				3B5B0E2429A5FA9D00AECF22 /* FeedTableViewCell.xib in Resources */,
 				3B85F219299F6F5000408FA8 /* Assets.xcassets in Resources */,
 				3B85F217299F6F5000408FA8 /* Main.storyboard in Resources */,
 			);

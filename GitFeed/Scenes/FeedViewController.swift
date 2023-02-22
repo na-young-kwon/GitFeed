@@ -19,17 +19,15 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Repository"
         configureTableView()
         bindViewModel()
-        navigationItem.title = "na-young-kwon/GitFeed"
     }
 
     private func configureTableView() {
+        let feedCellNib = UINib(nibName: "FeedTableViewCell", bundle: nil)
+        tableView.register(feedCellNib, forCellReuseIdentifier: "FeedTableViewCell")
         tableView.refreshControl = UIRefreshControl()
-        tableView.estimatedRowHeight = 64
-        // ?
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "FeedTableViewCell")
     }
 
     private func bindViewModel() {
@@ -50,7 +48,7 @@ class FeedViewController: UIViewController {
         
         let output = viewModel.transform(input: input)
             
-        // bind repos to tableView
+        // 테이블뷰에 바인딩
         output.repos
             .drive(tableView.rx.items(
                 cellIdentifier: FeedTableViewCell.reuseID,
