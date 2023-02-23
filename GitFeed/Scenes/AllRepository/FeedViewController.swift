@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
     
     var viewModel: FeedViewModel!
     weak var coordinator: FeedCoordinator?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -50,7 +51,6 @@ class FeedViewController: UIViewController {
         
         let output = viewModel.transform(input: input)
             
-        // 테이블뷰에 바인딩
         output.repos
             .drive(tableView.rx.items(
                 cellIdentifier: FeedTableViewCell.reuseID,

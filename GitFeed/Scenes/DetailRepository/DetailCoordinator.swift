@@ -24,7 +24,7 @@ final class DetailCoordinator: Coordinator {
     
     func start(with repo: Repository) {
         let controller = storyboard.instantiateViewController(ofType: DetailViewController.self)
-        let viewModel = DetailViewModel(repo: repo, useCase: UseCaseProvider().makeFeedsUseCase(), coordinator: self)
+        let viewModel = DetailViewModel(repo: repo, coordinator: self)
         
         controller.viewModel = viewModel
         navigationController.pushViewController(controller, animated: true)
@@ -34,10 +34,11 @@ final class DetailCoordinator: Coordinator {
         parentCoordinator?.removeChildCoordinator(self)
     }
     
-    func toCommitDetail() {
+    func toCommitDetail(with name: String) {
         let controller = storyboard.instantiateViewController(ofType: CommitHistoryViewController.self)
+        let viewModel = CommitHistoryViewModel(repoName: name, useCase: UseCaseProvider().makeCommitUseCase())
         
-//        controller.viewModel = commitHistoryViewModel
+        controller.viewModel = viewModel
         navigationController.pushViewController(controller, animated: true)
     }
 }

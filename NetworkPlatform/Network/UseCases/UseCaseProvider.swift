@@ -20,4 +20,7 @@ public final class UseCaseProvider: Domain.UseCaseProvider {
         return FeedsUseCase(network: networkProvider.makeFeedsUseCase(),
                             cache: Cache())
     }
+    public func makeCommitUseCase() -> Domain.CommitUseCase {
+        return CommitUseCase(network: networkProvider.makeCommitUseCase())
+    }
 }

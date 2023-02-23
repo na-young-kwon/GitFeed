@@ -18,4 +18,9 @@ final class NetworkProvider {
         let network = Network<Repository>(apiEndpoint)
         return FeedNetwork(network: network)
     }
+    
+    public func makeCommitUseCase() -> CommitNetwork {
+        let network = Network<Commit>(apiEndpoint)
+        return CommitNetwork(network: network)
+    }
 }

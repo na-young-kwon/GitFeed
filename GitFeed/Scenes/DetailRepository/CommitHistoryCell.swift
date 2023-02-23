@@ -17,16 +17,20 @@ class CommitHistoryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
     
-    func bind(_ viewModel: CommitHistoryViewModel) {
-        titleLabel.text = viewModel.commitTitle
-        descriptionLabel.text = viewModel.description
-        nameLabel.text = viewModel.userName
+// TODO: - 커밋메시지 \n으로 구분해서 descriptionLabel에도 글자넣기
+// TODO: - descriptionLabel 유무에따라 다이나믹 테이블뷰 구현
+// TODO: - 시간 가져온거 timeLabel에 표시하기
+
+    func bind(_ viewModel: CommitItemViewModel) {
+        titleLabel.text = viewModel.commitMessage
+        descriptionLabel.text = ""
+//        descriptionLabel.text = viewModel.description
 //        timeLabel.text = viewModel.time
+        nameLabel.text = viewModel.userName
         profileImage.layer.cornerRadius = 10
-        setImage(fromUrl: viewModel.avatarURL)
+        setImage(fromUrl: viewModel.profileURL)
     }
     
     private func setImage(fromUrl url: URL) {

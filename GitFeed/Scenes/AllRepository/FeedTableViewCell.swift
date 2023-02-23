@@ -21,14 +21,13 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     func bind(_ viewModel: FeedItemViewModel) {
-        profileImage.layer.cornerRadius = 10
         accessoryType = .disclosureIndicator
+        profileImage.layer.cornerRadius = 10
         titleLabel.text = viewModel.repo.name
         nameLabel.text = viewModel.repo.owner.name
         descriptionLabel.text = viewModel.repo.description ?? ""
         starCountLabel.text = String(viewModel.repo.stars)
         languageLabel.text = viewModel.repo.language ?? ""
-        
         setImage(fromUrl: viewModel.repo.owner.avatar)
     }
     

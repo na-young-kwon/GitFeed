@@ -20,31 +20,4 @@ final class FeedsUseCase: Domain.FeedUseCase {
     func repositories() -> Observable<[Repository]> {
         return network.fetchAllRepo()
     }
-    
-    
-//    func feeds(for feeds: [Feed]) -> Observable<[Feed]> {
-////        let stored = cache.fetchObject(for: feeds).asObservable()
-//
-//        // 캐시 없음
-//        // 네트워크 통신하고
-//        let fetched = network.fetchFeeds()
-////            .flatMap {
-////                // 캐시 저장
-////                return self.cache.save(objects: $0)
-////                    .asObservable()
-////                    .map(to: [Feed].self)
-////                // 여기서 concat은 왜필요할까
-////              //  .concat(Observable.just($0))
-////            }
-//        return fetched
-//    }
-}
-
-struct MapFromNever: Error {}
-extension ObservableType where Element == Never {
-    func map<T>(to: T.Type) -> Observable<T> {
-        return self.flatMap { _ in
-            return Observable<T>.error(MapFromNever())
-        }
-    }
 }

@@ -12,7 +12,6 @@ import RxCocoa
 
 final class DetailViewModel: ViewModelType {
     private let repo: Repository
-    private let useCase: FeedUseCase
     private let coordinator: DetailCoordinator
     
     struct Input {
@@ -25,9 +24,8 @@ final class DetailViewModel: ViewModelType {
         let showCommit: Driver<Void>
     }
     
-    init(repo: Repository, useCase: FeedUseCase, coordinator: DetailCoordinator) {
+    init(repo: Repository, coordinator: DetailCoordinator) {
         self.repo = repo
-        self.useCase = useCase
         self.coordinator = coordinator
     }
     
@@ -36,11 +34,14 @@ final class DetailViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
+        let activityIndicator = ActivityIndicator()
         let repo = Observable.just(repo)
             .asDriverOnErrorJustComplete()
-            
+                
         let showCommit = input.commitHistoryTrigger
-            .do(onNext: coordinator.toCommitDetail)
+            .do { [weak self] _ in
+                self?.coordinator.toCommitDetail(with: (self?.repo.fullName)!)
+            }
             
         return Output(repo: repo,
                       showCommit: showCommit)
