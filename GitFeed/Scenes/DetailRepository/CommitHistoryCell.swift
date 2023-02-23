@@ -10,7 +10,6 @@ import UIKit
 class CommitHistoryCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -19,14 +18,16 @@ class CommitHistoryCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-// TODO: - 커밋메시지 \n으로 구분해서 descriptionLabel에도 글자넣기
-// TODO: - descriptionLabel 유무에따라 다이나믹 테이블뷰 구현
+    override func setSelected(_ selected: Bool, animated: Bool) {
+         super.setSelected(selected, animated: animated)
+        
+        selectionStyle = .none
+     }
+     
 // TODO: - 시간 가져온거 timeLabel에 표시하기
 
     func bind(_ viewModel: CommitItemViewModel) {
         titleLabel.text = viewModel.commitMessage
-        descriptionLabel.text = ""
-//        descriptionLabel.text = viewModel.description
 //        timeLabel.text = viewModel.time
         nameLabel.text = viewModel.userName
         profileImage.layer.cornerRadius = 10
