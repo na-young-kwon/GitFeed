@@ -19,10 +19,9 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var forkLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var commitButton: UIButton!
     
     var viewModel: DetailViewModel!
-    weak var coordinator: DetailCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,7 @@ final class DetailViewController: UIViewController {
         return Binder(self) { vc, repo in
             vc.userName.text = repo.owner.name
             vc.titleLabel.text = repo.name
-//            vc.descriptionLabel.text = repo.description
+            vc.descriptionLabel.text = repo.description ?? ""
             vc.starLabel.text = "\(repo.stars) stars"
             vc.forkLabel.text = "\(repo.forks) forks"
             self.setImage(fromUrl: repo.owner.avatar)
@@ -48,11 +47,16 @@ final class DetailViewController: UIViewController {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
-        let input = DetailViewModel.Input(viewWillAppear: viewWillAppear)
+        let input = DetailViewModel.Input(viewWillAppear: viewWillAppear,
+                                          commitHistoryTrigger: commitButton.rx.tap.asDriver())
         let output = viewModel.transform(input: input)
         
         output.repo
             .drive(detailBinding)
+            .disposed(by: disposeBag)
+        
+        output.showCommit
+            .drive()
             .disposed(by: disposeBag)
     }
     
@@ -67,6 +71,6 @@ final class DetailViewController: UIViewController {
     }
     
     deinit {
-        coordinator?.popDetailCoordinator()
+        viewModel.popDetailCoordinator()
     }
 }

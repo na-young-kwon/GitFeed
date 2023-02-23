@@ -12,6 +12,7 @@ import NetworkPlatform
 final class DetailCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    private let storyboard = UIStoryboard(name: "Main", bundle: nil)
     private weak var parentCoordinator: Coordinator?
     
     init(parentCoordinator: Coordinator? = nil, navigationController: UINavigationController) {
@@ -22,16 +23,21 @@ final class DetailCoordinator: Coordinator {
     func start() { }
     
     func start(with repo: Repository) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(ofType: DetailViewController.self)
-        let viewModel = DetailViewModel(repo: repo, useCase: UseCaseProvider().makeFeedsUseCase())
+        let viewModel = DetailViewModel(repo: repo, useCase: UseCaseProvider().makeFeedsUseCase(), coordinator: self)
         
-        controller.coordinator = self
         controller.viewModel = viewModel
         navigationController.pushViewController(controller, animated: true)
     }
     
     func popDetailCoordinator() {
         parentCoordinator?.removeChildCoordinator(self)
+    }
+    
+    func toCommitDetail() {
+        let controller = storyboard.instantiateViewController(ofType: CommitHistoryViewController.self)
+        
+//        controller.viewModel = commitHistoryViewModel
+        navigationController.pushViewController(controller, animated: true)
     }
 }

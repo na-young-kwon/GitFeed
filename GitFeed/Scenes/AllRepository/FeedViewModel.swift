@@ -54,7 +54,7 @@ final class FeedViewModel: ViewModelType {
 //                self.coordinator.toDetailView()
 //            }
         // 이건 왜 안되는거지?..?
-            .do(onNext: coordinator.detail)
+            .do(onNext: coordinator.toDetail)
         
         return Output(fetching: fetching,
                       repos: repos,

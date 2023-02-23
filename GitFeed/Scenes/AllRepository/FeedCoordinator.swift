@@ -27,7 +27,7 @@ final class FeedCoordinator: Coordinator {
     }
     
     
-    func detail(_ repo: Repository) {
+    func toDetail(_ repo: Repository) {
         let detailCoordinator = DetailCoordinator(parentCoordinator: self,
                                                   navigationController: navigationController)
         childCoordinators.append(detailCoordinator)
