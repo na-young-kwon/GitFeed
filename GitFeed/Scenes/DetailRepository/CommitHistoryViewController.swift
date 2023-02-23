@@ -19,6 +19,18 @@ class CommitHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .darkGray
+        navigationItem.title = "Commits"
+        configureTableView()
+        bindViewModel()
+    }
+    
+    private func configureTableView() {
+        let feedCellNib = UINib(nibName: CommitHistoryCell.reuseID, bundle: nil)
+        tableView.register(feedCellNib, forCellReuseIdentifier: CommitHistoryCell.reuseID)
+        tableView.refreshControl = UIRefreshControl()
+    }
+    
+    private func bindViewModel() {
+        
     }
 }

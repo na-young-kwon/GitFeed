@@ -42,7 +42,7 @@ final class DetailViewController: UIViewController {
         }
     }
     
-    func bindViewModel() {
+    private func bindViewModel() {
         let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear))
             .mapToVoid()
             .asDriverOnErrorJustComplete()

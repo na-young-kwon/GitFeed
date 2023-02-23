@@ -27,8 +27,8 @@ class FeedViewController: UIViewController {
     }
 
     private func configureTableView() {
-        let feedCellNib = UINib(nibName: "FeedTableViewCell", bundle: nil)
-        tableView.register(feedCellNib, forCellReuseIdentifier: "FeedTableViewCell")
+        let feedCellNib = UINib(nibName: FeedTableViewCell.reuseID, bundle: nil)
+        tableView.register(feedCellNib, forCellReuseIdentifier: FeedTableViewCell.reuseID)
         tableView.refreshControl = UIRefreshControl()
     }
 

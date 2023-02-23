@@ -24,6 +24,8 @@
 		3B5B0E2F29A6003D00AECF22 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E2E29A6003D00AECF22 /* DetailCoordinator.swift */; };
 		3B5B0E3329A73C9200AECF22 /* CommitHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E3229A73C9200AECF22 /* CommitHistoryViewController.swift */; };
 		3B5B0E3729A73D0200AECF22 /* CommitHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E3629A73D0200AECF22 /* CommitHistoryViewModel.swift */; };
+		3B5B0E3929A742B400AECF22 /* CommitHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B0E3829A742B400AECF22 /* CommitHistoryCell.xib */; };
+		3B5B0E3B29A7435700AECF22 /* CommitHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E3A29A7435700AECF22 /* CommitHistoryCell.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -102,6 +104,8 @@
 		3B5B0E2E29A6003D00AECF22 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		3B5B0E3229A73C9200AECF22 /* CommitHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitHistoryViewController.swift; sourceTree = "<group>"; };
 		3B5B0E3629A73D0200AECF22 /* CommitHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitHistoryViewModel.swift; sourceTree = "<group>"; };
+		3B5B0E3829A742B400AECF22 /* CommitHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitHistoryCell.xib; sourceTree = "<group>"; };
+		3B5B0E3A29A7435700AECF22 /* CommitHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitHistoryCell.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -180,9 +184,9 @@
 		3B5B0E2929A5FE2F00AECF22 /* DetailRepository */ = {
 			isa = PBXGroup;
 			children = (
+				3B5B0E2C29A5FEBE00AECF22 /* DetailViewModel.swift */,
 				3B5B0E2A29A5FE8200AECF22 /* DetailViewController.swift */,
 				3B5B0E2E29A6003D00AECF22 /* DetailCoordinator.swift */,
-				3B5B0E2C29A5FEBE00AECF22 /* DetailViewModel.swift */,
 			);
 			path = DetailRepository;
 			sourceTree = "<group>";
@@ -192,6 +196,8 @@
 			children = (
 				3B5B0E3229A73C9200AECF22 /* CommitHistoryViewController.swift */,
 				3B5B0E3629A73D0200AECF22 /* CommitHistoryViewModel.swift */,
+				3B5B0E3A29A7435700AECF22 /* CommitHistoryCell.swift */,
+				3B5B0E3829A742B400AECF22 /* CommitHistoryCell.xib */,
 			);
 			name = CommitHistory;
 			path = DetailRepository;
@@ -518,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B85F21C299F6F5000408FA8 /* LaunchScreen.storyboard in Resources */,
+				3B5B0E3929A742B400AECF22 /* CommitHistoryCell.xib in Resources */,
 				3B5B0E2429A5FA9D00AECF22 /* FeedTableViewCell.xib in Resources */,
 				3B85F219299F6F5000408FA8 /* Assets.xcassets in Resources */,
 				3B85F217299F6F5000408FA8 /* Main.storyboard in Resources */,
@@ -643,6 +650,7 @@
 			files = (
 				3B5B0E1329A3632500AECF22 /* Reusable.swift in Sources */,
 				3B5B0E1529A49B5000AECF22 /* Coordinator.swift in Sources */,
+				3B5B0E3B29A7435700AECF22 /* CommitHistoryCell.swift in Sources */,
 				3B85F229299F76F000408FA8 /* ViewModelType.swift in Sources */,
 				3B5B0E0529A2707F00AECF22 /* FeedViewModel.swift in Sources */,
 				3B5B0E0D29A355C100AECF22 /* FeedItemViewModel.swift in Sources */,

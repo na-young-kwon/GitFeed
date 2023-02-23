@@ -12,19 +12,19 @@ final class CommitHistoryViewModel {
     let commitTitle: String
     let time: Date
     let description: String
-    let avatarURL: String
-    let user: String
+    let avatarURL: URL
+    let userName: String
     
     init(commitTitle: String,
          time: Date,
          description: String,
-         avatarURL: String,
-         ser: String
+         avatarURL: URL,
+         userName: String
     ) {
         self.commitTitle = commitTitle
         self.time = time
         self.description = description
         self.avatarURL = avatarURL
-        self.user = user
+        self.userName = userName
     }
 }
