@@ -13,10 +13,11 @@ public struct Repository: Decodable {
     public let description: String?
     public let stars: Int
     public let forks: Int
+    public let language: String?
     public let owner: Owner
     
     private enum CodingKeys: String, CodingKey {
-        case id, name, owner, description
+        case id, name, owner, description, language
         case forks = "forks_count"
         case stars = "stargazers_count"
     }

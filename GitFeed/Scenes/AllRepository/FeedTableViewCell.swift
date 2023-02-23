@@ -9,19 +9,26 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var detailLabel: UILabel!
-    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var starCountLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func bind(_ viewModel: FeedItemViewModel) {
-        profileImage.layer.cornerRadius = 25
+        profileImage.layer.cornerRadius = 10
         accessoryType = .disclosureIndicator
         titleLabel.text = viewModel.repo.name
-        detailLabel.text = viewModel.repo.owner.name
+        nameLabel.text = viewModel.repo.owner.name
+        descriptionLabel.text = viewModel.repo.description ?? ""
+        starCountLabel.text = String(viewModel.repo.stars)
+        languageLabel.text = viewModel.repo.language ?? ""
+        
         setImage(fromUrl: viewModel.repo.owner.avatar)
     }
     
