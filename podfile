@@ -10,9 +10,12 @@ def rx_cocoa
 end
 
 target 'GitFeed' do
+  
   use_frameworks!
   rx_cocoa
   rx_swift
+  pod 'Alamofire'
+  pod 'RxAlamofire'
 end
 
 target 'Domain' do

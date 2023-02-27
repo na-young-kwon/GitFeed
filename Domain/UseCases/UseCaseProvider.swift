@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol UseCaseProvider {
-    func makeFeedsUseCase() -> FeedUseCase
-    func makeCommitUseCase() -> CommitUseCase
-}
+//public protocol UseCaseProvider {
+//    func makeFeedsUseCase() -> FeedUseCase
+//    func makeCommitUseCase() -> CommitUseCase
+//}

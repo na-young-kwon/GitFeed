@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-public protocol CommitUseCase {
-    func commits(for: String) -> Observable<[Commit]>
-}
+//public protocol CommitUseCase {
+//    func commits(for: String) -> Observable<[Commit]>
+//}

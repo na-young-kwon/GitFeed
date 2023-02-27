@@ -16,6 +16,9 @@ final class CommitHistoryViewModel: ViewModelType {
     // TODO: - pop할때 인스턴스 여러개 쌓이는지 학인하고 후에 추가하기
     // 코디네이터 필요?
     
+    
+    // TODO: - 할일!! 에러핸들링 공부하기
+     
     struct Input {
         let trigger: Driver<Void>
     }

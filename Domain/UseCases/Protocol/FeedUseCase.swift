@@ -10,4 +10,5 @@ import RxSwift
 
 public protocol FeedUseCase {
     func repositories() -> Observable<[Repository]>
+    func commits(for: String) -> Observable<[Commit]>
 }

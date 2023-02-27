@@ -31,6 +31,11 @@
 		3B5B0E4329A7685200AECF22 /* CommitUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E4229A7685200AECF22 /* CommitUseCase.swift */; };
 		3B5B0E4529A7689A00AECF22 /* CommitUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E4429A7689A00AECF22 /* CommitUseCase.swift */; };
 		3B5B0E4829A7770100AECF22 /* CommitItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E4729A7770100AECF22 /* CommitItemViewModel.swift */; };
+		3B5B0E5029A8998800AECF22 /* DefaultFeedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E4F29A8998800AECF22 /* DefaultFeedUseCase.swift */; };
+		3B5B0E5429A89B5D00AECF22 /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E5329A89B5D00AECF22 /* FeedRepository.swift */; };
+		3B5B0E5629A89D2100AECF22 /* DefaultFeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E5529A89D2100AECF22 /* DefaultFeedRepository.swift */; };
+		3B5B0E5B29A8A1B100AECF22 /* FeedNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E5A29A8A1B100AECF22 /* FeedNetworkService.swift */; };
+		3B5B0E5E29A8BE9300AECF22 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B0E5D29A8BE9300AECF22 /* APIProvider.swift */; };
 		3B5EDAC229A0B6BE005D3E49 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5EDAC129A0B6BE005D3E49 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B5EDAC529A0B6BE005D3E49 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; };
 		3B5EDAC629A0B6BE005D3E49 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EDABF29A0B6BE005D3E49 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -116,6 +121,11 @@
 		3B5B0E4229A7685200AECF22 /* CommitUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitUseCase.swift; sourceTree = "<group>"; };
 		3B5B0E4429A7689A00AECF22 /* CommitUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitUseCase.swift; sourceTree = "<group>"; };
 		3B5B0E4729A7770100AECF22 /* CommitItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitItemViewModel.swift; sourceTree = "<group>"; };
+		3B5B0E4F29A8998800AECF22 /* DefaultFeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFeedUseCase.swift; sourceTree = "<group>"; };
+		3B5B0E5329A89B5D00AECF22 /* FeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepository.swift; sourceTree = "<group>"; };
+		3B5B0E5529A89D2100AECF22 /* DefaultFeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFeedRepository.swift; sourceTree = "<group>"; };
+		3B5B0E5A29A8A1B100AECF22 /* FeedNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNetworkService.swift; sourceTree = "<group>"; };
+		3B5B0E5D29A8BE9300AECF22 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		3B5EDABF29A0B6BE005D3E49 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5EDAC129A0B6BE005D3E49 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCase.swift; sourceTree = "<group>"; };
@@ -214,10 +224,61 @@
 			path = DetailRepository;
 			sourceTree = "<group>";
 		};
+		3B5B0E4929A897CF00AECF22 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E4A29A897DA00AECF22 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3B5B0E4A29A897DA00AECF22 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E5729A89DF400AECF22 /* Protocol */,
+				3B5B0E5529A89D2100AECF22 /* DefaultFeedRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3B5B0E4B29A897DA00AECF22 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E5C29A8A5EE00AECF22 /* Provider */,
+				3B5B0E5A29A8A1B100AECF22 /* FeedNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3B5B0E4E29A8996600AECF22 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */,
+				3B5B0E4429A7689A00AECF22 /* CommitUseCase.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3B5B0E5729A89DF400AECF22 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E5329A89B5D00AECF22 /* FeedRepository.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3B5B0E5C29A8A5EE00AECF22 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B0E5D29A8BE9300AECF22 /* APIProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		3B5EDAC029A0B6BE005D3E49 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				3B5EDACC29A0B6C9005D3E49 /* Entries */,
+				3B5EDACC29A0B6C9005D3E49 /* Model */,
 				3B5EDACB29A0B6C9005D3E49 /* UseCases */,
 				3B5EDAC129A0B6BE005D3E49 /* Domain.h */,
 			);
@@ -227,20 +288,20 @@
 		3B5EDACB29A0B6C9005D3E49 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				3B5EDACD29A0B6E1005D3E49 /* FeedUseCase.swift */,
-				3B5B0E4429A7689A00AECF22 /* CommitUseCase.swift */,
+				3B5B0E4E29A8996600AECF22 /* Protocol */,
 				3B5EDACF29A0B6E7005D3E49 /* UseCaseProvider.swift */,
+				3B5B0E4F29A8998800AECF22 /* DefaultFeedUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		3B5EDACC29A0B6C9005D3E49 /* Entries */ = {
+		3B5EDACC29A0B6C9005D3E49 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				3B5B0E1F29A5D98100AECF22 /* Repository.swift */,
 				3B5B0E3E29A75C0000AECF22 /* Commit.swift */,
 			);
-			path = Entries;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B5EDAF129A0BA49005D3E49 /* NetworkPlatform */ = {
@@ -298,6 +359,8 @@
 			children = (
 				3B85F20E299F6F5000408FA8 /* GitFeed */,
 				3B5EDAC029A0B6BE005D3E49 /* Domain */,
+				3B5B0E4B29A897DA00AECF22 /* Network */,
+				3B5B0E4929A897CF00AECF22 /* Data */,
 				3B5EDAF129A0BA49005D3E49 /* NetworkPlatform */,
 				3B85F20D299F6F5000408FA8 /* Products */,
 				EFF186699A17397B895929DA /* Pods */,
@@ -642,8 +705,13 @@
 				3B5B0E3F29A75C0000AECF22 /* Commit.swift in Sources */,
 				3B5B0E4529A7689A00AECF22 /* CommitUseCase.swift in Sources */,
 				3B5EDAD029A0B6E7005D3E49 /* UseCaseProvider.swift in Sources */,
+				3B5B0E5029A8998800AECF22 /* DefaultFeedUseCase.swift in Sources */,
 				3B5EDACE29A0B6E1005D3E49 /* FeedUseCase.swift in Sources */,
+				3B5B0E5429A89B5D00AECF22 /* FeedRepository.swift in Sources */,
 				3B5B0E2029A5D98100AECF22 /* Repository.swift in Sources */,
+				3B5B0E5E29A8BE9300AECF22 /* APIProvider.swift in Sources */,
+				3B5B0E5B29A8A1B100AECF22 /* FeedNetworkService.swift in Sources */,
+				3B5B0E5629A89D2100AECF22 /* DefaultFeedRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
